@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center relative">
-        
+         
         <div className="max-w-md relative">
         <Image
           className="absolute scale-[200%]  blur-3xl animate-fade-in -z-10"
