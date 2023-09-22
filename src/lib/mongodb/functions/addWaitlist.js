@@ -1,4 +1,6 @@
 import clientPromise from '../index';
+import sendMessage from '@/utils/sendWebhook';
+import censorEmail from '@/utils/censorEmail';
 
 export default async function addToWaitlist(data) {
   let client;
@@ -22,6 +24,7 @@ export default async function addToWaitlist(data) {
     } else {
       // If no document with the same email exists, insert the new data.
       await waitlistCollection.insertOne(data);
+      await sendMessage(`New waitlist signup: ${data.name} - \`${censorEmail(data.email)}\``);
       return true;
     }
   } catch (error) {
