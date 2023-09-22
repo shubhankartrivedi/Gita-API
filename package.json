@@ -11,11 +11,15 @@
   "dependencies": {
     "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.16",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.5.2",
     "next": "13.5.2",
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3"
+    "react-google-recaptcha": "^3.1.0",
+    "tailwindcss": "3.3.3",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "tailwindcss-inner-border": "^0.2.0"

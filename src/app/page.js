@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Yellowtail } from "next/font/google"
+import Waitlist from "@/components/utils/waitlist"
 
 
 import Krishna from './images/gita.png'
@@ -12,7 +13,7 @@ const yellowtail = Yellowtail({
 
 export default function Home() {
   return (
-    <div className="flex flex-col sm:px-10 px-5 pt-5 gap-10 w-full">
+    <div className="flex flex-col sm:px-10 px-5 pt-5 gap-10 w-screen h-screen relative overflow-x-hidden">
 
 
       <div className="flex flex-col justify-center items-center gap-3">
@@ -38,7 +39,7 @@ export default function Home() {
        
       </div>
 
-
+      <Waitlist />
     </div>
   )
 }
