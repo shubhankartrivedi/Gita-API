@@ -9,18 +9,11 @@ module.exports = {
    extend: {
     animation: {
       "fade-in": "fadeIn 5s ease-in-out",
+      "fade-in-simple": "fadeInSimple 1s ease-out",
       "pop-in": "popIn 8s ease-in-out",
     }, 
     keyframes: () => ({
-      fadeIn: {
-        "0%": { opacity: 0, transform: "scale(100%)" },
-        "100%": { opacity: 1, transform: "scale(200%)"}
-      },
-      popIn: {
-        "0%": { filter: "blur(20px)", opacity: 0 },
-        "80%": { filter: "blur(20px)", opacity: 0 },
-        "100%": { filter: "blur(0px)", opacity: 1}
-      }
+      
      
     }),
    }

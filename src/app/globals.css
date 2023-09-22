@@ -16,6 +16,111 @@
   }
 }
 
+/* Define keyframes for both standard and -webkit animations */
+@keyframes fromLeft {
+  0%, 90% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add -webkit prefix for keyframes */
+@-webkit-keyframes fromLeft {
+  0%, 90% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to elements as needed */
+.animate-from-left {
+  animation: fromLeft 9s ease-in-out;
+  -webkit-animation: fromLeft 9s ease-in-out; /* Add -webkit prefix */
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(200%);
+  }
+}
+
+@keyframes fadeInSimple {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    filter: blur(20px);
+    opacity: 0;
+  }
+  80% {
+    filter: blur(20px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Add -webkit prefixes */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(100%);
+    transform: scale(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(200%);
+    transform: scale(200%);
+  }
+}
+
+@-webkit-keyframes fadeInSimple {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes popIn {
+  0% {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 
 h1 {
   font-weight: 700;
