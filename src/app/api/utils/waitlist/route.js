@@ -30,7 +30,7 @@ export async function POST(request) {
 
     if (recaptchaVerificationData.success) {
       // reCAPTCHA verification succeeded, add to the waitlist
-    //   await addToWaitlist(data);
+      await addToWaitlist(data);
       return NextResponse.json({ success: true }, { status: 200 });
     } else {
       // reCAPTCHA verification failed

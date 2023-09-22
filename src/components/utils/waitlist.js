@@ -61,7 +61,7 @@ export default function Waitlist() {
 
     const onChangeEmail = (e) => {
         if(isEmailValid(e.target.value)) {
-            recaptchaRef.current.execute();
+           
         }
         setEmail(e.target.value)
     }
