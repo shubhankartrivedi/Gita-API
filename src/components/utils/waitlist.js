@@ -1,5 +1,6 @@
 'use client'
 import React, { useRef, useState, useEffect } from 'react';
+import ReactLoading from 'react-loading';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import isEmailValid from '@/utils/checkEmail';
@@ -14,6 +15,7 @@ export default function Waitlist() {
 
     const [error, setError] = useState({show: false, message: ''})
     const [success, setSuccess] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const [captcha, setCaptcha] = useState(false)
     const [token, setToken] = useState('')
@@ -22,6 +24,7 @@ export default function Waitlist() {
         setToken(value)
     }
     const handleSubmit = async () => {
+        
         setError({show: false, message: ''})
         if(!email || !name) {
             return setError({show: true, message: 'Missing name or email'})
@@ -32,7 +35,7 @@ export default function Waitlist() {
         if(!token) {
             return setError({show: true, message: 'Captcha error, refresh the page.'})
         }
-
+        setLoading(true)
         const res = await fetch('/api/utils/waitlist', {
             method: 'POST',
             headers: {
@@ -47,6 +50,7 @@ export default function Waitlist() {
         if(data.success) {
             setSuccess(true)
         }
+        setLoading(false)
 
     };
     
@@ -94,7 +98,11 @@ export default function Waitlist() {
                         <input onChange={onChangeName} className='dark:bg-white/20 bg-white/50 dark:placeholder:text-white/50 placeholder:text-black/30 dark:text-white text-black/80 py-1 px-3 rounded-t-xl border-b border-black/20' type="text" placeholder="Name" />
                         <input onChange={onChangeEmail} className='dark:bg-white/20 bg-white/50 dark:placeholder:text-white/50 placeholder:text-black/30 dark:text-white text-black/80 py-1 px-3 rounded-b-xl' type="email" placeholder="Email" />
                     </div>
-                    <button className='text-black bg-yellow-500/90 hover:bg-yellow-500 px-3 rounded-xl' onClick={handleSubmit}>Join Waitlist</button>
+                    <button disabled={loading?true:false} className='text-black bg-yellow-500/90 hover:bg-yellow-500 px-3 rounded-xl' onClick={handleSubmit}>
+                        {loading?<div className='animate-fade-in-simple'><ReactLoading type='spin' color='black' height={30} width={30} /></div>:"Join Waitlist"}
+                        
+                        
+                        </button>
                 </div>
                 <div className=''>
                     <p className={`${error.show?'block':'hidden'} text-red-500 text-sm`}>{error.message}</p>
