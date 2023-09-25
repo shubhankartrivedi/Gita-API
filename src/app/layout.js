@@ -2,6 +2,8 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
+import Script from 'next/script';
+
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -52,6 +54,7 @@ keywords: ['bhagavad', 'gita', 'gita api', 'bhagavad gita'],
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Script src="https://kit.fontawesome.com/83dd3f2548.js"></Script>
       <body className={`${inter.className} dark:bg-black bg-white`}>
         {children}
       <Analytics />
