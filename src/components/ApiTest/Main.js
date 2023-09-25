@@ -14,7 +14,7 @@ export default function Main(){
                         <Input setRes={setRes}/>
                     </div>
                     <div className="md:w-2/3">
-                      <Response data={res}/>
+                     {res && <Response data={res}/>} 
                     </div>
                 </div>
             </div>
