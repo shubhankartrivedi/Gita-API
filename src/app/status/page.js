@@ -1,4 +1,5 @@
 import getStatus from "@/components/getStatus";
+import StarRating from "@/components/Feedback/StarRating";
  
 export async function generateMetadata() {
     let data = await getStatus();
@@ -60,6 +61,7 @@ export default async function Status(){
             <h1 className="text-9xl dark:text-white text-black">Gita API Status</h1>
             <div className="text-3xl dark:text-white text-black">{statusText}</div>
             <div className="text-3xl dark:text-white text-black">API Ping: {ping}ms</div>
+            {/* <StarRating /> */}
         </div>
     )
 
