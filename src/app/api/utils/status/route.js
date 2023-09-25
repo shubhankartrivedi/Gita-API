@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import addStatus from '@/lib/mongodb/functions/addStatus';
 import findStatus from '@/lib/mongodb/functions/findStatus';
-import { revalidateTag } from 'next/cache'
+import { revalidateTag, revalidatePath } from 'next/cache'
 
 export async function POST(request) {
   const data = await request.json();
@@ -23,7 +23,9 @@ export async function POST(request) {
         status: status,
         ping: ping
     });
-    revalidateTag('status')
+    revalidateTag('status');
+    revalidatePath('/status');
+    
   return NextResponse.json({ success: true }, { status: 200 });
 
   
