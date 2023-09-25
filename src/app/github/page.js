@@ -7,13 +7,13 @@ export async function generateMetadata() {
     const image = data.images[0]
     const url = data.url
     return {
-        title: title,
+        title: 'Gita API - Github',
             description: description,
             url: url,
             themeColor: '#000',
             siteName: 'Gita API - Github',
         openGraph: {
-            title: title,
+            title: 'Gita API - Github',
             description: description,
             url: url,
             siteName: 'Gita API - Github',
@@ -26,7 +26,7 @@ export async function generateMetadata() {
           ],
         },
         twitter: {
-          title: title,
+            title: 'Gita API - Github',
           description: description,
           url: url,
           siteName: 'Gita API - Github',
