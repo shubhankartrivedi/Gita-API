@@ -1,11 +1,7 @@
-import fetcher from "@/components/utils/fetch";
+import getStatus from "@/components/getStatus";
  
 export async function generateMetadata() {
-    let data = await fetcher('/api/utils/status',{
-        method: 'GET',
-        next: { tags: ['status'] }
-    })
-    data = await data.json()
+    let data = await getStatus();
     const statusText = data.statusText;
     const ping = data.ping;
     const image = 'https://gita.shubhankartrivedi.com/images/meta.png'
@@ -56,11 +52,7 @@ export async function generateMetadata() {
 }
 
 export default async function Status(){
-    let data = await fetcher('/api/utils/status',{
-        method: 'GET',
-        next: { tags: ['status'] }
-    })
-    data = await data.json()
+  let data = await getStatus();
     const statusText = data.statusText;
     const ping = data.ping;
     return(

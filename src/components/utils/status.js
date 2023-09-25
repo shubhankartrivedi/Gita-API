@@ -1,5 +1,5 @@
 'use client';
-import fetcher from "@/components/utils/fetch";
+
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 
@@ -7,7 +7,7 @@ export default function Status(){
     const [status, setStatus] = useState('Loading...');
     const [refresh, setRefresh] = useState(false);
     useEffect(() => {
-        fetcher('/api/utils/status',{
+        fetch('/api/utils/status',{
             method: 'GET',
             next: { tags: ['status'] }
         }).then(res => res.json())
