@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function GoBack(){
     return (
-        <div className="absolute top-0 left-0 px-5 py-5">
-           <Link href='/' className="dark:bg-white px-3 py-1 rounded duration-100">
-          Go Back
+        <div className="absolute top-0 left-0 px-5 py-5 ">
+           <Link href='/' className="dark:bg-white/10 dark:text-white/40 hover:dark:bg-white/20 hover:dark:text-white px-3 py-1 rounded duration-100">
+           <i className="fa-solid fa-chevron-left mr-1"></i> Go Back
            </Link>
         </div>
     )

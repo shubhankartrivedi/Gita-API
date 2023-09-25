@@ -15,6 +15,11 @@ export const metadata = {
   title: 'The Bhagavad Gita API',
   description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
 keywords: ['bhagavad', 'gita', 'gita api', 'bhagavad gita'],
+themeColor: [
+  { media: '(prefers-color-scheme: light)', color: '#FFBD33' },
+  { media: '(prefers-color-scheme: dark)', color: '#713E11' },
+],
+
  // colorScheme: 'dark',
  // publishedTime: blog.timestamp,
   openGraph: {

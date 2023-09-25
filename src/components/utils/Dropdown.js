@@ -14,7 +14,7 @@ export default function Dropdown({ options, onSelect, Selected }) {
                         onSelect(selectedOption);
                     }
                 }}
-                className="dark:bg-gray-700 bg-gray-300 dark:text-gray-400 text-gray-600 px-4 py-2 w-full appearance-none pr-8 rounded-3xl"
+                className="dark:bg-gray-700 bg-gray-200 dark:text-gray-400 text-gray-600 px-4 py-2 w-full focus:outline-none focus:border-2 border-yellow-500 dark:border-yellow-800 appearance-none pr-8 rounded-3xl"
             >
                 {options.map((option) => (
                     <option key={option.value} value={option.value}>
