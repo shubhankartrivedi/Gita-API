@@ -16,6 +16,7 @@ export default function Sandbox() {
                    
                 <div className=''>
                             <h3 className='text-white font-bold text-xl drop-shadow'>🤖 Try v1 BETA</h3>
+                            
                         </div>
                    
                   
