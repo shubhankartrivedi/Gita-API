@@ -1,7 +1,7 @@
 
  
 export async function generateMetadata() {
-    let data = await fetch('http://localhost:3000/api/utils/status',{
+    let data = await fetch('http://gita.shubhankartrivedi.com/api/utils/status',{
         method: 'GET',
         next: { tags: ['status'] }
     })
@@ -56,7 +56,7 @@ export async function generateMetadata() {
 }
 
 export default async function Status(){
-    let data = await fetch('http://localhost:3000/api/utils/status',{
+    let data = await fetch('http://gita.shubhankartrivedi.com/api/utils/status',{
         method: 'GET',
         next: { tags: ['status'] }
     })

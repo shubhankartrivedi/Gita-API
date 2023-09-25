@@ -7,7 +7,7 @@ export default function Status(){
     const [status, setStatus] = useState('Loading...');
     const [refresh, setRefresh] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:3000/api/utils/status',{
+        fetch('http://gita.shubhankartrivedi.com/api/utils/status',{
             method: 'GET',
             next: { tags: ['status'] }
         }).then(res => res.json())
