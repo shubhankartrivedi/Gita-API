@@ -1,7 +1,7 @@
-
+import fetcher from "@/components/utils/fetch";
  
 export async function generateMetadata() {
-    let data = await fetch('http://gita.shubhankartrivedi.com/api/utils/status',{
+    let data = await fetcher('/api/utils/status',{
         method: 'GET',
         next: { tags: ['status'] }
     })
@@ -56,7 +56,7 @@ export async function generateMetadata() {
 }
 
 export default async function Status(){
-    let data = await fetch('http://gita.shubhankartrivedi.com/api/utils/status',{
+    let data = await fetcher('/api/utils/status',{
         method: 'GET',
         next: { tags: ['status'] }
     })

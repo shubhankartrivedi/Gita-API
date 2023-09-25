@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from '../utils/Dropdown';
 import ReactLoading from 'react-loading';
 import getOperatingSystem from '@/utils/getOS';
+import fetcher from "@/components/utils/fetch";
 
 const options = [
     { label: 'Get all Chapters info', value: 0 },
@@ -68,7 +69,7 @@ export default function Input({setRes}) {
     const handleSend = async () => {
         setLoading(true);
         setRes();
-        const res = await fetch(`${url}`);
+        const res = await fetcher(`${url}`);
         const data = await res.json();
         setRes(data);
         setLoading(false);
