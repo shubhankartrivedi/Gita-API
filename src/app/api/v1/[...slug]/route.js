@@ -1,16 +1,26 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import sendMessage from '@/utils/sendWebhook';
+import getCountryNameFromCode from '@/utils/getCountry';
+import getEmojiFromCountryCode from '@/utils/getCountryEmoji';
 
 export async function GET(request, { params }) {
     const { slug } = params;
+
+    const countryCode = request.geo.country;
+    const countryName = await getCountryNameFromCode(countryCode);
+    const countryEmoji = await getEmojiFromCountryCode(countryCode);
+
+
+    
 
     const isChapter = slug[0] === 'chapter';
     const chapter = slug[1] || null;
 
     const isVerse = slug[2] === 'verse';
     const verse = slug[3] || null;
-
+    await sendMessage(`API Req from ${countryName} - ${countryEmoji}\n \`\`\` Chapter: ${chapter} \nVerse: ${verse} \`\`\``, "https://discord.com/api/webhooks/1155930312581333022/Eu2vRC--QS6khF7VpNEnjgbr9CUR9TsB3jArNXtkmDQuGq4Hmu4GJEo1ypAJW94wE_SJ");
     const gitaFolderPath = path.join(process.cwd(), 'src', 'gita');
 
     if (!fs.existsSync(path.join(gitaFolderPath, 'chapters.json'))) {

@@ -5,6 +5,7 @@ import Dropdown from '../utils/Dropdown';
 import ReactLoading from 'react-loading';
 import getOperatingSystem from '@/utils/getOS';
 
+
 const options = [
     { label: 'Get all Chapters info', value: 0 },
     { label: 'Get specific chapter info', value: 1 },
