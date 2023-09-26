@@ -40,7 +40,7 @@ export default function Main(){
              
             <div className="flex md:flex-row gap-5 flex-col w-full">
                 <div className="md:w-1/3">
-                    <Input setRes={setRes}/>
+                    <Input theme={darkMode} setRes={setRes}/>
                 </div>
                 <div className="md:w-2/3 h-[88vh]">
                     {res && <Response key={darkModeKey} theme={darkMode} data={res}/>} 
