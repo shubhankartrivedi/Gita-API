@@ -13,7 +13,7 @@ const options = [
     { label: 'Get specific verse info of specific chapter', value: 3}
   ];
 
-export default function Input({setRes}) {
+export default function Input({setRes, theme}) {
     
     const [loading , setLoading] = useState(false);
     const [selectedOption, setSelectedOption] = useState(options[0]);
@@ -104,12 +104,12 @@ export default function Input({setRes}) {
             <div className='flex flex-col gap-2'>
                 {
                     selectedOption.value >= 1 && (
-                        <input value={chapter} onChange={onChapterChange} type='number' className='w-full px-3 py-1 dark:bg-gray-800 dark:text-gray-400 focus:outline-none focus:border-2 border-yellow-500 dark:border-yellow-800 bg-gray-200 text-gray-900 rounded-md text-md' placeholder='Chapter number' />
+                        <input value={chapter} onChange={onChapterChange} type='number' className='w-full px-3 py-1 dark:bg-gray-800 dark:text-gray-400 focus:outline outline-yellow-500 dark:outline-yellow-800 bg-gray-200 text-gray-900 rounded-md text-md' placeholder='Chapter number' />
                     )
                 }
                  {
                     selectedOption.value >= 3 && (
-                        <input value={verse} onChange={onVerseChange} type='number' className='w-full px-3 py-1 dark:bg-gray-800 dark:text-gray-400 bg-gray-200 text-gray-900 focus:outline-none focus:border-2 border-yellow-500 dark:border-yellow-800 rounded-md text-md' placeholder='Verse number' />
+                        <input value={verse} onChange={onVerseChange} type='number' className='w-full px-3 py-1 dark:bg-gray-800 dark:text-gray-400 bg-gray-200 text-gray-900 focus:outline outline-yellow-500 dark:outline-yellow-800 rounded-md text-md' placeholder='Verse number' />
                     )
                 }
                 
@@ -125,7 +125,11 @@ export default function Input({setRes}) {
             </div>
                 <div className='flex flex-col w-full'>
                     <button onClick={handleSend} className='flex animate-fade-in-simple justify-center px-3 py-1 dark:bg-yellow-900 dark:text-yellow-400 dark:hover:bg-yellow-800 bg-yellow-500 text-yellow-800 hover:bg-yellow-400 rounded-md text-md'>
-                    {loading?<div className='animate-fade-in-simple '><ReactLoading type='spin' color='white' height={30} width={30} /></div>:
+                    {loading?<div className='animate-fade-in-simple '>
+
+                      <ReactLoading type='spin' color={!theme?'#854d0e':'#facc15'} height={30} width={30} /></div>
+                      
+                      :
                     <div className='flex gap-2'>
                         
                         <div className='flex'>

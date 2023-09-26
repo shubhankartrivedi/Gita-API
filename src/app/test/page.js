@@ -54,8 +54,10 @@ export const metadata = {
 export default function Test(){
     
     return (
-        <div>
+        <div className="flex flex-col gap-5">
+          <div className="">
             <GoBack />
+            </div>
             <Main />
         </div>
     )
