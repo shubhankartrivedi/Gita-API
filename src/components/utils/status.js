@@ -18,14 +18,13 @@ export default function Status(){
         })
     }, [refresh])
     const onMouseEnter = () => {
-        setStatus('Check API Status')
-    }
-    const onMouseLeave = () => {
         setRefresh(!refresh)
     }
+    const onMouseLeave = () => {
+    }
     return (
-        <Link onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} href='/status' target='_blank' className="sm:block hidden dark:bg-white/10 dark:text-white/40 hover:dark:bg-white/20 hover:dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-500 px-3 py-1 rounded duration-100">
-        { status == 'Check API Status' && <i className="fa-solid fa-up-right-from-square mr-1"></i>} {status}
-        </Link>
+        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="sm:block hidden dark:bg-white/10 dark:text-white/40 hover:dark:bg-white/20 hover:dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-500 px-3 py-1 rounded duration-100">
+       {status}
+        </div>
     )
 }
