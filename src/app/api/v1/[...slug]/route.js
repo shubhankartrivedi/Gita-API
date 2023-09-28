@@ -4,7 +4,7 @@ import path from 'path';
 import sendMessage from '@/utils/sendWebhook';
 import getCountryNameFromCode from '@/utils/getCountry';
 import getEmojiFromCountryCode from '@/utils/getCountryEmoji';
-
+export const runtime = 'nodejs' // 'nodejs' (default) | 'edge'
 export async function GET(request, { params }) {
     const { slug } = params;
 

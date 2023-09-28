@@ -96,7 +96,11 @@ export default function Input({setRes, theme}) {
     return (
         <div className='flex flex-col h-full justify-end gap-5 md:pr-5'>
             <div className='flex flex-col h-full gap-5'>
+            <div className='flex flex-col gap-2'>
             <h1 className='dark:text-white text-black text-xl'><span className='dark:text-yellow-400 bg-yellow-500 text-yellow-800 dark:bg-yellow-900 shadow-lg shadow-yellow-500 dark:shadow-yellow-900  rounded-full px-1.5 py-1'>v1</span> BETA Testing</h1>
+            <h3 className='dark:text-gray-400 text-gray-500 text-sm'>Here you can test the API to implement on your own Project.</h3>
+            </div>
+
             <div className='flex'>
                
             <Dropdown options={options} onSelect={handleOptionSelect} Selected={selectedOption} />
