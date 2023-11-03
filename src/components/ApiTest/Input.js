@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Dropdown from '../utils/Dropdown';
 import ReactLoading from 'react-loading';
-import getOperatingSystem from '@/utils/getOS';
+import getOperatingSystem from '../../utils/getOS';
 
 
 const options = [

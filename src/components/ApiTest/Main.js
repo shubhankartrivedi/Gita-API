@@ -1,11 +1,7 @@
 'use client'
 import React, { useState, useEffect} from 'react';
-import Input from "@/components/ApiTest/Input"
-import Response from "@/components/ApiTest/Response"
-import Image from 'next/image';
-import Link from 'next/link';
-
-import favicon from '@/app/favicon.ico';
+import Input from "../../components/ApiTest/Input"
+import Response from "../../components/ApiTest/Response"
 
 export default function Main(){
     const [res, setRes] = useState();
