@@ -69,7 +69,9 @@ export default function Input({setRes, theme}) {
     const handleSend = async () => {
         setLoading(true);
         setRes();
-        const res = await fetch(`${url}`);
+        const res = await fetch(`${url}`, {
+          cache: 'force-cache',
+        });
         const data = await res.json();
         setRes(data);
         setLoading(false);
