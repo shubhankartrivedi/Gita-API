@@ -1,9 +1,6 @@
 import Image from "next/image"
 import { Yellowtail } from "next/font/google"
-import Waitlist from "@/components/utils/waitlist"
 import Sandbox from "@/components/utils/Sandbox"
-
-
 import Krishna from './images/gita.png'
 
 const yellowtail = Yellowtail({

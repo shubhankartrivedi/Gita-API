@@ -1,7 +1,10 @@
+import { MongoClient } from 'mongodb';
 import clientPromise from '../index';
 
+
+
 export default async function findStatus() {
-  let client;
+  let client: MongoClient;
 
   try {
     // Get the MongoDB client instance from the promise

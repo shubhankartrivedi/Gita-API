@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import Status from "./utils/status";
-import StarRating from "./Feedback/StarRating";
 
 export default function GoBack() {
-
     return (
         <div className="absolute top-0 left-0 px-5 py-5 flex items-center gap-5">
             <div className="flex gap-2">

@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-
 import loader from '@monaco-editor/loader';
 
 function JsonEditor(props) {

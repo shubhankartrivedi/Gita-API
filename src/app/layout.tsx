@@ -56,7 +56,7 @@ themeColor: [
   },
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Script src="https://kit.fontawesome.com/83dd3f2548.js"></Script>
