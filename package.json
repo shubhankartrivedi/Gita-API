@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
-    "@types/react": "^18.2.34",
+    "@types/react": "18.2.37",
     "tailwindcss-inner-border": "^0.2.0",
     "typescript": "^5.2.2"
   }
