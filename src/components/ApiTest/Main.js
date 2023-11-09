@@ -4,7 +4,7 @@ import Input from "../../components/ApiTest/Input"
 import Response from "../../components/ApiTest/Response"
 
 export default function Main(){
-    const [res, setRes] = useState();
+    const [res, setRes] = useState('');
     const [darkMode, setDarkMode] = useState(false);
     const [darkModeKey, setDarkModeKey] = useState(0);  // added this state
 

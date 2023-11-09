@@ -20,8 +20,8 @@ export default function Input({setRes, theme}) {
     const [url, setUrl] = useState('/api/v1/chapter');
     const [os, setOs] = useState('');
 
-    const [chapter, setChapter] = useState();
-    const [verse, setVerse] = useState();
+    const [chapter, setChapter] = useState('');
+    const [verse, setVerse] = useState('');
 
     const onChapterChange = (e) => {
         const value = parseInt(e.target.value);
