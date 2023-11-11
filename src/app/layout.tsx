@@ -8,20 +8,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 export const metadata = {
-
-  
-   
-
   title: 'The Bhagavad Gita API',
   description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
-keywords: ['bhagavad', 'gita', 'gita api', 'bhagavad gita'],
-themeColor: [
-  { media: '(prefers-color-scheme: light)', color: '#FFBD33' },
-  { media: '(prefers-color-scheme: dark)', color: '#713E11' },
-],
+  keywords: ['bhagavad', 'gita', 'gita api', 'bhagavad gita'],
 
- // colorScheme: 'dark',
- // publishedTime: blog.timestamp,
+  themeColor: {
+    light: '#FFBD33',
+    dark: '#713E11',
+  },
+
+  // Note: The 'colorScheme' property is no longer needed as 'themeColor' can handle this.
+  // Note: 'publishedTime' should be dynamically generated if needed.
+
   openGraph: {
     title: 'The Bhagavad Gita API',
     description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
@@ -32,12 +30,13 @@ themeColor: [
         url: 'https://gita.shubhankartrivedi.com/images/meta.png',
         width: 800,
         height: 800,
+        alt: 'The Bhagavad Gita API', // Include 'alt' text for images
       },
     ],
-    // locale: 'en_US',
     type: 'website',
-    // publishedTime: blog.timestamp,
+    // 'locale' and 'publishedTime' can be added if relevant
   },
+
   twitter: {
     title: 'The Bhagavad Gita API',
     description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
@@ -48,13 +47,14 @@ themeColor: [
         url: 'https://gita.shubhankartrivedi.com/images/meta.png',
         width: 800,
         height: 800,
+        alt: 'The Bhagavad Gita API', // Include 'alt' text for images
       },
     ],
-    // locale: 'en_US',
     type: 'website',
-    // publishedTime: blog.timestamp,
+    // 'locale' and 'publishedTime' can be added if relevant
   },
 }
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
