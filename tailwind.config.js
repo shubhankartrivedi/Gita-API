@@ -11,10 +11,10 @@ module.exports = {
       "fade-in": "fadeIn 5s ease-in-out",
       "fade-in-simple": "fadeInSimple 1s ease-out",
       "pop-in": "popIn 8s ease-in-out",
+      "fade-out": "fadeOut 300ms ease-in-out",
     }, 
     keyframes: () => ({
       
-     
     }),
    }
   },

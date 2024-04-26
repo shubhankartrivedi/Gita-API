@@ -14,8 +14,6 @@
     "autoprefixer": "10.4.16",
     "axios": "^1.5.0",
     "monaco-editor": "^0.43.0",
-    "mongodb": "^6.1.0",
-    "mongoose": "^7.5.2",
     "next": "14.0.1",
     "postcss": "8.4.31",
     "react": "18.2.0",

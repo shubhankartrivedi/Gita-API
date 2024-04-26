@@ -121,6 +121,14 @@
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    @apply opacity-100
+  }
+  100% {
+    @apply opacity-0
+  }
+}
 
 h1 {
   font-weight: 700;
