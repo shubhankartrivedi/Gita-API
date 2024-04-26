@@ -3,11 +3,17 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
 import Script from 'next/script';
+import type { Metadata, Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin'] })
 
-
-export const metadata = {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FFBD33' },
+    { media: '(prefers-color-scheme: dark)', color: '#713E11' },
+  ],
+}
+export const metadata: Metadata = {
 
   
    
@@ -15,10 +21,6 @@ export const metadata = {
   title: 'The Bhagavad Gita API',
   description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
 keywords: ['bhagavad', 'gita', 'gita api', 'bhagavad gita'],
-themeColor: [
-  { media: '(prefers-color-scheme: light)', color: '#FFBD33' },
-  { media: '(prefers-color-scheme: dark)', color: '#713E11' },
-],
 
  // colorScheme: 'dark',
  // publishedTime: blog.timestamp,
@@ -41,8 +43,7 @@ themeColor: [
   twitter: {
     title: 'The Bhagavad Gita API',
     description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
-    url: 'https://gita.shubhankartrivedi.com',
-    siteName: 'Gita API',
+    card: 'summary_large_image',
     images: [
       {
         url: 'https://gita.shubhankartrivedi.com/images/meta.png',
@@ -50,9 +51,7 @@ themeColor: [
         height: 800,
       },
     ],
-    // locale: 'en_US',
-    type: 'website',
-    // publishedTime: blog.timestamp,
+    
   },
 }
 
