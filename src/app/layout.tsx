@@ -13,17 +13,16 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#713E11' },
   ],
 }
+
 export const metadata: Metadata = {
 
-  
+
    
 
   title: 'The Bhagavad Gita API',
   description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
 keywords: ['bhagavad', 'gita', 'gita api', 'bhagavad gita'],
-
- // colorScheme: 'dark',
- // publishedTime: blog.timestamp,
+  metadataBase: new URL('https://gita.shubhankartrivedi.com'),
   openGraph: {
     title: 'The Bhagavad Gita API',
     description: 'The Bhagavad Gita API is a REST API that serves the Bhagavad Gita verse by verse in JSON format.',
